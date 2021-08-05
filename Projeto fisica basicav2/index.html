@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Fisica</title>
+</head>
+<body>
+    <!--COnteiner 2-->
+    <div class="conteiner_fis">
+        <table border="1px" style="border-collapse: collapse;" class="table_mae">
+            <thead>
+                <th colspan="4"><p>Quantidade de variáveis</p></th>
+                
+            </thead>
+            <tr>
+                <td colspan="4">
+                    <select name="quanti_variaveis" id="qua_variaves">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <input type="button" value="Inserir" class="btn_quant_var" id="btn_qua">
+                </td>
+            </tr>
+            <thead>
+                <th>
+                    Dados
+                </th>
+                <th>
+                    Formula
+                </th>
+                <th>
+                    Resulatdo
+                </th>
+                <th>
+                    Constante
+                </th>
+            </thead>
+            
+            <tr>
+                <td>
+                    <table>
+                        <thead>
+                            <th>Nome</th>
+                            <th></th>
+                            <th>valor</th>
+                            <th>Unidade</th>
+                        </thead>
+                        <td>
+                            <input type="text" name="letra" id="var_letra1" placeholder="F" class="inputs inputTextNumeber">
+                        </td>
+                        <td>=</td>
+                        <td>
+                            <input type="number" name="valor" id="var_valor1" placeholder="0" class="inputs inputTextNumeber"> 
+                        </td>
+                        <td>
+                            <select name="" id="selecionar_unidade">
+                                <optgroup>
+                                    <option value="1">metro</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <thead>
+                            <th>x=y?</th>
+                        </thead>
+                        <tr>
+                            <td>
+                                <input type="text" name="" id="txt1_1_fase" placeholder="x" class="inputTextNumeber">
+                            </td>
+                            <td>=</td>
+                            <td><input type="text" name="" id="txt2_1_fase" placeholder="y" class="inputTextNumeber"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td rowspan="4"><div class="res" id="res_div">0=0?0</div></td>
+                <td rowspan="4">
+                    <table>
+                        <thead>
+                            <th>Nome</th>
+                            <th></th>
+                            <th>valor</th>
+                        </thead>
+                        <td>
+                            <input type="text" name="nome_const" id="nome_da_constante" placeholder="g" class="inputTextNumeber">
+                        </td>
+                        <td>=</td>
+                        <td>
+                            <input type="number" name="nome_const" id="nome_da_constante" placeholder="9.8" class="inputTextNumeber">
+                        </td>
+                        <td><input type="button" value="Inserir" id="inserir_contante"></td>
+                    </table>
+
+                </td>
+            </tr>
+            <tr class="duasVariaveis">
+                <td>
+                    <table>
+                        <thead>
+                            <th>Nome</th>
+                            <th></th>
+                            <th>valor</th>
+                            <th>Unidade</th>
+                        </thead>
+                        <td>
+                            <input type="text" name="letra" id="var_letra2" placeholder="F" class="inputs inputTextNumeber">
+                        </td>
+                        <td>=</td>
+                        <td>
+                            <input type="number" name="valor" id="var_valor2" placeholder="0" class="inputs inputTextNumeber"> 
+                        </td>
+                        <td>
+                            <select name="" id="">
+                                <optgroup>
+                                    <option value="1">metro</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <thead>
+                            <th>x?y</th>
+                        </thead>
+                        <tr>
+                            <td>
+                                <input type="text" name="" id="txt1_2_fase" placeholder="x" class="inputTextNumeber">
+                            </td>
+                            <td>
+                                <select name="" id="selecionar_sinal">
+                                    <option value="mais">+</option>
+                                    <option value="menos">-</option>
+                                    <option value="produto">x</option>
+                                    <option value="dividir">/</option>
+                                </select>
+                            </td>
+                            <td><input type="text" name="" id="txt2_2_fase" placeholder="y" class="inputTextNumeber"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>   
+            <tr>
+                <td>
+                    <table>
+                        <thead>
+                            <th>Nome</th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                        <td>
+                            <input type="text" name="letra" id="var_letra_pergunta" placeholder="F" class="inputs inputTextNumeber">
+                        </td>
+                        <td id="intero">?</td>
+                        <td>
+                            <input type="button" value="Inserir" id="btn_dados">
+                        </td>
+                    </table>
+                </td>
+                <td>
+                    <input type="button" value="Inserir" id="inserir_formula">
+                </td>
+            </tr>
+            
+            <thead>
+                <th colspan="4"><p>Formulas predefinidas</p></th>
+            </thead>
+            <tr>
+                <td colspan="4">
+                    <div class="formulas_predefinidas">
+                        <div class="involucro_formulas">
+                            <select name="selecao_das_formulas" id="sele_formulas">
+                                <optgroup>
+                                    <option value="F=ma">F=ma</option>
+                                    <option value="p=mg">p=mg</option>
+                                </optgroup>
+                                <optgroup>
+                                    <option value="v=x/t">V=x/t</option>
+                                    <option value="x=tv">X=tv</option>
+                                </optgroup>
+                                <optgroup>
+                                    <option value="w=fx">W=fx</option>
+                                    <option value="p=E/t">p=E/t</option>
+                                </optgroup>
+                            </select>
+                            <input type="button" value="Inserir" id="btb_sele_formu">
+                        </div>
+                        
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--#######################################################-->
+    <script src="./js.js"></script>
+</body>
+</html>
